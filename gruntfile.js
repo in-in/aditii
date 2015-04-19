@@ -198,6 +198,12 @@ module.exports = function (grunt) {
           dest: 'build/img/'
         }]
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'build'
+      },
+      src: ['**']
     }
   });
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -215,6 +221,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('comb', ['newer:csscomb']);
   grunt.registerTask('svg', ['newer:svgmin:dev', 'svgstore']);
