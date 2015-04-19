@@ -1,0 +1,20 @@
+input.search-input {
+  box-sizing: border-box;
+  width: em(434);
+  height: em(31);
+  padding-right: 2em;
+  padding-left: .5em;
+
+  color: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  outline: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%225%20-10%2064.639381%2091.543002%22%20fill%3D%22%23e3e3e3%22%3E%3Cpath%20d%3D%22M31.5-9.998C10.656-9.998-6.312%206.94-6.312%2027.784c0%2020.848%2016.968%2037.812%2037.812%2037.812%205.744%200%2011.182-1.29%2016.062-3.594l16.75%2016.75c1.805%201.8%204.187%202.782%206.75%202.782%202.627%200%205.127-1.038%207-2.907%203.82-3.82%203.855-9.99.094-13.75L62.563%2049.284c4.237-6.102%206.72-13.522%206.72-21.5%200-20.844-16.94-37.78-37.782-37.78zm0%2015.125c12.507%200%2022.656%2010.15%2022.656%2022.656%200%2012.51-10.15%2022.688-22.656%2022.688-12.505%200-22.688-10.177-22.688-22.687%200-12.505%2010.182-22.656%2022.688-22.656z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  background-size: 1.4em 1.4em;
+  &:focus {
+    border: 1px solid $main-color;
+    background-image: none;
+  }
+}

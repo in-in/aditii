@@ -1,20 +1,39 @@
 module.exports = function (grunt) {
   'use strict';
+  require('time-grunt')(grunt);
   grunt.initConfig({
     watch: {
       sass: {
-        files: "dev/scss/*.scss",
+        files: "src/scss/**/*.scss",
         tasks: ['sass:dev', 'autoprefixer']
+      },
+      jade: {
+        files: "src/jade/**/*.jade",
+        tasks: ['jade']
+      },
+      svg: {
+        files: 'src/img/svg/*.svg',
+        tasks: ['newer:svgmin', 'svgstore']
       }
     },
     sass: {
       dev: {
         options: {
+          includePaths: [
+            'node_modules/normalize-libsass/',
+            'node_modules/bourbon/app/assets/stylesheets',
+            'src/scss/',
+            'src/scss/base/',
+            'src/scss/layout/',
+            'src/scss/module/',
+            'src/scss/state/',
+            'src/scss/utilities/'
+          ],
           outputStyle: 'nested',
           imagePath: '../img'
         },
         files: {
-          "dev/css/style.css": "dev/scss/style.scss"
+          "src/css/style.css": "src/scss/index.scss"
         }
       }
     },
@@ -24,16 +43,61 @@ module.exports = function (grunt) {
           browsers: ['last 2 versions']
         },
         files: [{
-          src: 'dev/css/style.css'
+          src: 'src/css/style.css'
         }]
+      }
+    },
+    svgstore: {
+      options: {
+        cleanup: true,
+        cleanupdefs: true,
+        prefix: 'icon-',
+        svg: {
+          style: "display: none;"
+        }
+      },
+      dev: {
+        files: {
+          'src/jade/includes/svg-def.jade': ['src/img/svg/svgmin/*.svg']
+        }
+      }
+    },
+    svgmin: {
+      options: {
+        plugins: [
+          {removeViewBox: false},
+          {removeUselessStrokeAndFill: false},
+          {removeMetadata: true}
+        ]
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/svg/',
+            src: ['*.svg'],
+            dest: 'src/img/svg/svgmin',
+            ext: '.svg'
+          }
+        ]
+      }
+    },
+    jade: {
+      dev: {
+        options: {
+          pretty: true
+        },
+        files: {
+          "src/index.html": "src/jade/*.jade"
+        }
       }
     },
     browserSync: {
       default_options: {
         bsFiles: {
           src: [
-            "dev/css/*.css",
-            "dev/*.html"
+            "src/css/*.css",
+            "src/*.html"
           ]
         },
         options: {
@@ -44,35 +108,53 @@ module.exports = function (grunt) {
           open: true,
           browser: "chromium-browser",
           server: {
-            baseDir: "dev"
+            baseDir: "src"
           }
         }
       }
     },
-    
-//    CssComb
-    
+
+    //    CssComb
+
     csscomb: {
-      css: {
+      dev: {
         options: {
           config: '.csscomb.json'
         },
-        files: {
-          'dev/scss/style.scss': ['dev/scss/style.scss'],
-          'dev/css/style.css': ['dev/css/style.css']
-        }
+        files: [{
+          expand: true,
+          cwd: 'src/scss',
+          src: ['**/*.scss',
+                '!**/_utilities.scss',
+                '!**/_vars.scss',
+                '!**/_module.scss'
+               ],
+          dest: 'src/scss/',
+          ext: '.scss'
+        }]
       }
     },
-    
+
+
     // Build tasks
-    
+    clean: {
+      build: {
+        src: ["build"]
+      }
+    },
     copy: {
       build: {
         files: [
           {
             expand: true,
-            cwd: 'dev/',
-            src: ['**', '!**/scss/**'],
+            cwd: 'src/',
+            src: [
+              '**',
+              '!**/scss/**',
+              '!**/jade/**',
+              '!**/svg/**',
+              '!**/font/**'
+            ],
             dest: 'build/'
           }
         ]
@@ -81,7 +163,7 @@ module.exports = function (grunt) {
     cssmin: {
       build: {
         files: {
-          'build/css/style.min.css': ['build/css/style.css']
+          'build/css/style.css': ['build/css/style.css']
         }
       }
     },
@@ -104,7 +186,7 @@ module.exports = function (grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'dev/img/',
+          cwd: 'src/img/',
           src: ['**/*.{png,jpg,gif}'],
           dest: 'build/img/'
         }]
@@ -120,8 +202,23 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-svgstore');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('comb', ['csscomb']);
-  grunt.registerTask('build', ['copy', 'cssmin', 'htmlmin', 'imagemin']);
-  grunt.registerTask('default', ['browserSync', 'autoprefixer', 'watch']);
+  grunt.registerTask('comb', ['newer:csscomb']);
+  grunt.registerTask('build', [
+    'clean',
+    'copy',
+    'cssmin',
+    'htmlmin',
+    'imagemin'
+  ]);
+  grunt.registerTask('default', [
+    'browserSync',
+    'watch'
+  ]);
 };

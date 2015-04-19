@@ -1,0 +1,48 @@
+footer {
+  background-color: $main-color;
+}
+
+.footer-top {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+
+.footer-top-col {
+  width: 25%;
+
+//  outline: 1px dashed #7816fd;
+}
+
+.footer-col-title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: em(25);
+}
+
+.footer-col-list {
+  list-style: none;
+  margin-left: 5px;
+  line-height: 1.6em;
+}
+
+.footer-col-list a {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-family: $font-desc;
+  font-size: em(15);
+}
+
+.footer-bottom {
+  height: 46px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.copyright {
+  font-family: $font-desc;
+  font-size: em(15);
+  line-height: 46px;
+}

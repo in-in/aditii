@@ -1,0 +1,30 @@
+ul.menu {
+  box-sizing: border-box;
+  height: em(36);
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu li {
+  @include f-center;
+}
+
+.menu li a {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-size: em(21);
+}
+
+.menu li:not(:last-child)::after {
+  height: em(21);
+  margin-right: em(21);
+  margin-left: em(21);
+
+  content: '';
+
+  border-left: 2px solid #fff;
+}

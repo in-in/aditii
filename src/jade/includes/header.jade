@@ -1,0 +1,20 @@
+header
+    .hdr-top
+        .container
+            .row
+                .l-logo.logo Aditii
+                .l-search.search
+                    input(type="text", name="search").search-input
+                .l-cart.cart
+                    svg.icon.icon-cart
+                        use(xlink:href="#icon-cart")
+                    .price $300
+    nav
+        .container
+            +list(menuItem).row.l-menu.menu
+    // BANNER
+    include banner
+    // BANNER ends
+    // slider
+    include slider
+    // slider ends

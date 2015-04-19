@@ -1,0 +1,29 @@
+doctype html
+- var menuItem = ["Home", "Sale", "Handbags", "Wallets", "Accessories", "Mens Store", "Shoes", "Vintage", "Services", "Contact us"]
+- var footerLink =["Alexis Hudson", "American Apparel", "Ben Sherman", "Big Buddha", "Chanel", "Christian Audigier", "Coach", "Cole Haan"]
+
+mixin list(items)
+    ul&attributes(attributes)
+        each item in items
+            li: a(href="") #{item}
+
+html(lang="en")
+    head
+        title Aditii
+        link(href="css/style.css", rel="stylesheet")
+    body
+        // SVG SOURCE
+        include includes/svg-def
+        // SVG SOURCE ends
+        // HEADER
+        include includes/header
+        // HEADER ends
+        // MAIN
+        include includes/main
+        // MAIN ends
+        // FOOTER
+        include includes/footer
+        // FOOTER ends
+        script(src='/js/flickity.pkgd.min.js')
+        
+        

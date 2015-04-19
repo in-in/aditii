@@ -1,0 +1,92 @@
+.hdr-slider {
+  .container {
+    padding: 0;
+  }
+}
+
+.sldr-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sldr-list-item {
+  box-sizing: border-box;
+  width: em(341);
+  height: em(190);
+
+  justify-content: space-between;
+  p {
+    margin: 0;
+    margin-top: -.2em;
+    padding: 0;
+
+    color: $brand-title-color;
+
+    font-size: em(27);
+    font-weight: 700;
+  }
+  img {
+    max-width: 60%;
+
+    align-self: center;
+  }
+}
+
+.slsr-list-right {
+  max-width: 40%;
+  margin-right: 4.3em;
+  margin-left: -2em;
+  padding-top: 3em;
+}
+
+.sldr-list-item:not(:last-child) {
+  border-right: 1px solid #e7e7e7;
+}
+
+.sldr-btn {
+  margin-top: .7em;
+  padding-right: em(13);
+  padding-left: em(13);
+
+  border-radius: 3px;
+  background-color: $btn-bg;
+
+  font-size: em(19);
+  line-height: em(26);
+}
+
+.sldr-list .flickity-prev-next-button {
+  width: 5.500em;
+  height: 5.500em;
+
+  border-radius: 0;
+  background: transparent;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #dbdbdb;
+}
+
+.flickity-prev-next-button.previous {
+  left: -7em;
+}
+.flickity-prev-next-button.next {
+  right: -7em;
+}
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: none;
+}

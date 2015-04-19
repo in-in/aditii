@@ -1,0 +1,17 @@
+.icon-cart {
+  width: em(41);
+  height: em(36);
+  padding: em(5);
+
+  fill: $main-color;
+}
+
+.price {
+  box-sizing: border-box;
+  padding-top: em(4);
+
+  color: $font-price-color;
+
+  font-size: em(34);
+  font-weight: 900;
+}
