@@ -847,6 +847,9 @@ input.search-input {
   font-weight: 900;
   line-height: 1.6875em; }
 
+.foo {
+  color: red; }
+
 footer {
   background-color: #3cc3b5; }
 

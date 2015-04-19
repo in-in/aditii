@@ -47,6 +47,11 @@ module.exports = function (grunt) {
         }]
       }
     },
+    
+    
+    // Build tasks
+    
+    
     svgstore: {
       options: {
         cleanup: true,
@@ -58,7 +63,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          'src/jade/includes/svg-def.jade': ['src/img/svg/svgmin/*.svg']
+          'src/jade/includes/svg-def.jade': ['src/img/svg/*.min.svg']
         }
       }
     },
@@ -70,14 +75,14 @@ module.exports = function (grunt) {
           {removeMetadata: true}
         ]
       },
-      dist: {
+      dev: {
         files: [
           {
             expand: true,
             cwd: 'src/img/svg/',
             src: ['*.svg'],
-            dest: 'src/img/svg/svgmin',
-            ext: '.svg'
+            dest: 'src/img/svg/',
+            ext: '.min.svg'
           }
         ]
       }
@@ -137,6 +142,8 @@ module.exports = function (grunt) {
 
 
     // Build tasks
+
+
     clean: {
       build: {
         src: ["build"]
@@ -210,6 +217,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-newer');
 
   grunt.registerTask('comb', ['newer:csscomb']);
+  grunt.registerTask('svg', ['newer:svgmin:dev', 'svgstore']);
   grunt.registerTask('build', [
     'clean',
     'copy',
