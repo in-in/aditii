@@ -491,7 +491,7 @@ html {
 body {
   color: #fff;
   font-family: Bebas Neue, sans-serif;
-  font-size: 16px; }
+  font-size: 100%; }
 
 nav {
   background-color: #4cc8bb; }
@@ -854,37 +854,41 @@ footer {
   background-color: #3cc3b5; }
 
 .footer-top {
-  padding-top: 45px;
-  padding-bottom: 40px; }
+  padding-top: 2.938em;
+  padding-bottom: 2.5em; }
 
 .footer-top-col {
-  width: 25%; }
+  margin-right: 11.945392491%; }
+
+.footer-top-col:last-child {
+  margin-right: 0; }
 
 .footer-col-title {
   margin: 0;
-  margin-bottom: 15px;
-  font-size: 1.5625em; }
+  margin-bottom: 0.68em;
+  font-size: 1.563em;
+  line-height: 100%; }
 
 .footer-col-list {
   list-style: none;
-  margin-left: 5px;
-  line-height: 1.6em; }
+  margin-left: 0.313em;
+  line-height: 160%; }
 
 .footer-col-list a {
   text-decoration: none;
   color: #fff;
   font-family: Open Sans, sans-serif;
-  font-size: 0.9375em; }
+  font-size: 0.938em; }
 
 .footer-bottom {
-  height: 46px;
+  min-height: 2.875em;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1); }
 
 .copyright {
   font-family: Open Sans, sans-serif;
-  font-size: 0.9375em;
-  line-height: 46px; }
+  font-size: 0.938em;
+  line-height: 2.875em; }
 
 /*------------------------------------*\
    State
