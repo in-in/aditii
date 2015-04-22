@@ -11,21 +11,23 @@ footer {
   margin-right: 11.945392491%;
 }
 
-.footer-top-col:last-child{
+.footer-top-col:last-child {
   margin-right: 0;
 }
 
 .footer-col-title {
   margin: 0;
-  margin-bottom: 0.68em;
+  margin-bottom: .68em;
 
   font-size: 1.563em;
   line-height: 100%;
 }
 
 .footer-col-list {
+  margin-left: .313em;
+
   list-style: none;
-  margin-left: 0.313em;
+
   line-height: 160%;
 }
 
@@ -35,17 +37,19 @@ footer {
   color: #fff;
 
   font-family: $font-desc;
-  font-size: 0.938em;
+  font-size: .938em;
 }
 
 .footer-bottom {
   min-height: 2.875em;
+
   text-align: center;
+
   background-color: rgba(0, 0, 0, .1);
 }
 
 .copyright {
   font-family: $font-desc;
-  font-size: 0.938em;
+  font-size: .938em;
   line-height: 2.875em;
 }

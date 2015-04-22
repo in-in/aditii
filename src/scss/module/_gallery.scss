@@ -1,23 +1,24 @@
 .main-gallery {
-  margin-top: 47px;
-  margin-bottom: 26px;
+  margin-top: 2.9375em;
+  margin-bottom: 1.625em;
 }
-
 
 .main-gallery-item {
   display: flex;
   flex-direction: column;
 
   box-sizing: border-box;
-  height: 260px;
-  width: 255px;
+  width: 29.010238908%;
+  max-width: 255px;
+  max-height: 260px;
   margin-right: 6.484641638%;
-  margin-bottom: 47px;
-  padding-bottom: 30px;
+  margin-bottom: 5.348%;
+  padding-top: 3.641%;
+  padding-bottom: 3.414%;
 
   color: $brand-title-color;
-  border-bottom: 5px solid $main-color;
-  box-shadow: 0 0 3px $brand-title-color;
+  border-bottom: .313em solid $btn-bg;
+  box-shadow: 0 0 .188em $brand-title-color;
 
   align-items: center;
   justify-content: flex-end;
@@ -27,58 +28,44 @@
   margin-right: 0;
 }
 
-.item-info {
-  text-align: center;
+.main-gallery-item img {
+  max-width: 100%;
 }
 
 .item-title {
   margin-top: .3em;
-  margin-bottom: .3em;
+  margin-bottom: .304em;
 
-  font-size: em(27);
+  letter-spacing: .04em;
+
+  font-size: 1.438em; //23/16 = 1.438
+  line-height: 100%;
 }
 
-.itm-price {
-  margin-right: .5em;
+.price-info {
+  width: 100%;
 
-  vertical-align: bottom;
+  @include f-center;
+  justify-content: center;
+}
 
-  font-size: em(27);
-  font-weight: 900;
+.item-price {
+  display: block;
+
+  margin-right: .65em;
+
+  font-family: 'Bebas Neue Bold';
+  font-size: 1.438em; //23/16 = 1.438
+  line-height: 100%;
 }
 
 .item-btn {
-  padding-right: em(10);
-  padding-left: em(10);
+  padding: .4386em .7143em;
 
-  border-radius: 3px;
+  border-radius: .188em;
   background-color: $btn-bg;
 
-  font-size: em(21);
-  font-weight: 900;
-  line-height: em(27);
+  font-family: 'Bebas Neue Bold';
+  font-size: 1em;
+  line-height: 100%;
 }
-
-.foo {
-  color: red;
-}
-
-
-//74,5 отступы от галлерии
-//875 ширина галлерии
-//759 ширана всех плиток без отступов
-//58 маржин между плитками
-
-//255 ширина одной плитки
-//765 ширина всех плиток
-//57 ширина маржинов 
-//114 two margin
-//879 ширина галеры
-
-//85.44921875%  ширина галлерии
-//81.93359375% ширина галлерии c отступов
-
-//879÷1024 = 85.83984375%
-//879÷988 = 88.967611336%
-//57÷879 = 6.484641638%
-

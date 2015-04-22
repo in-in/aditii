@@ -159,8 +159,8 @@ module.exports = function (grunt) {
               '**',
               '!**/scss/**',
               '!**/jade/**',
-              '!**/svg/**',
-              '!**/font/**'
+              '!**/svg/**'
+//            '!**/font/**'
             ],
             dest: 'build/'
           }
