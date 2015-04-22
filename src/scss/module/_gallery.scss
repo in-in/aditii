@@ -38,7 +38,7 @@
 
   letter-spacing: .04em;
 
-  font-size: 1.438em; //23/16 = 1.438
+  font-size: $font-27;
   line-height: 100%;
 }
 
@@ -54,18 +54,11 @@
 
   margin-right: .65em;
 
-  font-family: 'Bebas Neue Bold';
-  font-size: 1.438em; //23/16 = 1.438
+  font-family: $font-bold;
+  font-size: $font-27;
   line-height: 100%;
 }
 
 .item-btn {
-  padding: .4386em .7143em;
-
-  border-radius: .188em;
-  background-color: $btn-bg;
-
-  font-family: 'Bebas Neue Bold';
-  font-size: 1em;
-  line-height: 100%;
+  padding: 0.563em .7143em;
 }

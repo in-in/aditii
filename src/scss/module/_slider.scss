@@ -1,21 +1,7 @@
-.hdr-slider {
-  .container {
-    padding: 0;
-  }
-}
-
-.sldr-list {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .sldr-list-item {
   box-sizing: border-box;
-  width: em(341);
-  height: em(190);
+  width: 34.412955466%;
+  min-height: 192px;
 
   justify-content: space-between;
   p {
@@ -25,12 +11,11 @@
 
     color: $brand-title-color;
 
-    font-size: em(27);
-    font-weight: 700;
+    font-size: $font-27;
+    font-family: $font-bold;
   }
   img {
-    max-width: 60%;
-
+    max-width: 100%;
     align-self: center;
   }
 }
@@ -47,16 +32,10 @@
 }
 
 .sldr-btn {
-  margin-top: .7em;
-  padding-right: em(13);
-  padding-left: em(13);
-
-  border-radius: 3px;
-  background-color: $btn-bg;
-
-  font-size: em(19);
-  line-height: em(26);
+  margin-top: .85em;
+  padding: 0.5em 0.938em;
 }
+
 
 .sldr-list .flickity-prev-next-button {
   width: 5.500em;

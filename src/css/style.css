@@ -511,7 +511,11 @@ nav {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  font-family: Bebas Neue, sans-serif; }
+  border-radius: .188em;
+  font-size: 1em;
+  font-family: 'Bebas Neue Bold';
+  background-color: #3cc395;
+  line-height: 100%; }
 
 /* ========================================================================== */
 /*                                                                            */
@@ -717,19 +721,10 @@ input.search-input {
   border-radius: 7px;
   font-size: 1.6875em; }
 
-.hdr-slider .container {
-  padding: 0; }
-
-.sldr-list {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
 .sldr-list-item {
   box-sizing: border-box;
-  width: 21.3125em;
-  height: 11.875em;
+  width: 34.412955466%;
+  min-height: 192px;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -738,10 +733,10 @@ input.search-input {
     margin-top: -.2em;
     padding: 0;
     color: #afafaf;
-    font-size: 1.6875em;
-    font-weight: 700; }
+    font-size: 1.438em;
+    font-family: Bebas Neue Bold, sans-serif; }
   .sldr-list-item img {
-    max-width: 60%;
+    max-width: 100%;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center; }
@@ -756,13 +751,8 @@ input.search-input {
   border-right: 1px solid #e7e7e7; }
 
 .sldr-btn {
-  margin-top: .7em;
-  padding-right: 0.8125em;
-  padding-left: 0.8125em;
-  border-radius: 3px;
-  background-color: #3cc395;
-  font-size: 1.1875em;
-  line-height: 1.625em; }
+  margin-top: .85em;
+  padding: 0.5em 0.938em; }
 
 .sldr-list .flickity-prev-next-button {
   width: 5.5em;
@@ -799,9 +789,11 @@ input.search-input {
 .main-header-title {
   box-sizing: border-box;
   margin: 0;
-  margin-left: 1.4375em;
+  margin-left: 1.438em;
+  font-size: 1.563em;
   padding: 0;
-  line-height: 2.7em; }
+  line-height: 2.8em;
+  letter-spacing: .04em; }
 
 .main-gallery {
   margin-top: 2.9375em;
@@ -864,17 +856,12 @@ input.search-input {
 .item-price {
   display: block;
   margin-right: .65em;
-  font-family: 'Bebas Neue Bold';
+  font-family: Bebas Neue Bold, sans-serif;
   font-size: 1.438em;
   line-height: 100%; }
 
 .item-btn {
-  padding: .4386em .7143em;
-  border-radius: .188em;
-  background-color: #3cc395;
-  font-family: 'Bebas Neue Bold';
-  font-size: 1em;
-  line-height: 100%; }
+  padding: 0.563em .7143em; }
 
 footer {
   background-color: #3cc3b5; }
