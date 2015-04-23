@@ -9,12 +9,12 @@
 
 /* position dots in gallery */
 .gallery .flickity-page-dots {
-  bottom: em(34);
+  bottom: 2.125em;
 }
 /* white circles */
 .gallery .flickity-page-dots .dot {
-  width: em(9);
-  height: em(9);
+  width: 0.5625em;
+  height: 0.5625em;
 
   opacity: 1;
   background: #fff;
@@ -31,31 +31,44 @@
 
 .gallery-cell {
   width: 100%;
-  height: em(446);
+  min-height: 27.5em;
 
   align-items: center;
+  img {
+    max-width: 100%;
+  }
 }
+
+//height: 446px;
 
 .bnr-title {
   margin: 0;
-  padding: 0;
 
-  font-size: em(61);
+  font-size: 3.5em;
+  font-family: $font-bold;
+}
+
+.bnr-title:nth-of-type(2){
+  margin-top: -0.179em;
 }
 
 .bnr-desc {
+  width: 90%;
+  margin-top: 0.5em;
+  margin-bottom: 1.8em;
   font-family: $font-desc;
-  font-size: em(17);
+  font-size: 1em;
 }
 
 .bnr-btn {
-  padding-top: em(3);
-  padding-right: em(15);
-  padding-bottom: em(3);
-  padding-left: em(15);
+  padding-top: 0.4em;
+  padding-right: 1.087em;
+  padding-bottom: 0.4em;
+  padding-left: 1.087em;
 
-  border: 3px solid #fff;
-  border-radius: 7px;
+  border: 0.144em solid #fff;
+  border-radius: 0.304em;
 
-  font-size: em(27);
+  font-size: $font-27;
+  background-color: transparent;
 }

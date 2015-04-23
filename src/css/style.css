@@ -698,28 +698,37 @@ input.search-input {
 
 .gallery-cell {
   width: 100%;
-  height: 27.875em;
+  min-height: 27.5em;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .gallery-cell img {
+    max-width: 100%; }
 
 .bnr-title {
   margin: 0;
-  padding: 0;
-  font-size: 3.8125em; }
+  font-size: 3.5em;
+  font-family: Bebas Neue Bold, sans-serif; }
+
+.bnr-title:nth-of-type(2) {
+  margin-top: -0.179em; }
 
 .bnr-desc {
+  width: 90%;
+  margin-top: 0.5em;
+  margin-bottom: 1.8em;
   font-family: Open Sans, sans-serif;
-  font-size: 1.0625em; }
+  font-size: 1em; }
 
 .bnr-btn {
-  padding-top: 0.1875em;
-  padding-right: 0.9375em;
-  padding-bottom: 0.1875em;
-  padding-left: 0.9375em;
-  border: 3px solid #fff;
-  border-radius: 7px;
-  font-size: 1.6875em; }
+  padding-top: 0.4em;
+  padding-right: 1.087em;
+  padding-bottom: 0.4em;
+  padding-left: 1.087em;
+  border: 0.144em solid #fff;
+  border-radius: 0.304em;
+  font-size: 1.438em;
+  background-color: transparent; }
 
 .sldr-list-item {
   box-sizing: border-box;
@@ -811,9 +820,9 @@ input.search-input {
   max-width: 255px;
   max-height: 260px;
   margin-right: 6.484641638%;
-  margin-bottom: 5.348%;
-  padding-top: 3.641%;
-  padding-bottom: 3.414%;
+  margin-bottom: 2.938em;
+  padding-top: 2em;
+  padding-bottom: 1.875em;
   color: #afafaf;
   border-bottom: .313em solid #3cc395;
   box-shadow: 0 0 .188em #afafaf;
