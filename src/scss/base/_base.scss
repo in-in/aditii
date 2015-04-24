@@ -34,7 +34,6 @@ html {
 body {
   color: #fff;
 
-  font-family: $font-main;
   font-size: 100%;
 }
 
@@ -52,10 +51,10 @@ nav {
   text-decoration: none;
 
   color: #fff;
-
   border-radius: .188em;
-  font-size: $font-19;
-  font-family: 'Bebas Neue Bold';
   background-color: $btn-bg;
+
+  font-family: 'Bebas Neue Bold';
+  font-size: $font-19;
   line-height: 100%;
 }

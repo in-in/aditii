@@ -473,12 +473,6 @@ ul, ol {
   src: url('../font/bebasneue_bold-webfont.woff') format('woff'), url('../font/bebasneue_bold-webfont.ttf') format('truetype'); }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../font/bebasneue_regular-webfont.woff') format('woff'), url('../font/bebasneue_regular-webfont.ttf') format('truetype'); }
-
-@font-face {
   font-family: 'Lobster';
   font-weight: normal;
   font-style: normal;
@@ -499,7 +493,6 @@ html {
 
 body {
   color: #fff;
-  font-family: Bebas Neue, sans-serif;
   font-size: 100%; }
 
 nav {
@@ -512,9 +505,9 @@ nav {
   text-decoration: none;
   color: #fff;
   border-radius: .188em;
-  font-size: 1em;
-  font-family: 'Bebas Neue Bold';
   background-color: #3cc395;
+  font-family: 'Bebas Neue Bold';
+  font-size: 1em;
   line-height: 100%; }
 
 /* ========================================================================== */
@@ -542,23 +535,25 @@ nav {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
 
-.l-logo, .l-cart {
-  -webkit-flex-basis: 20%;
-      -ms-flex-preferred-size: 20%;
-          flex-basis: 20%; }
+.l-logo {
+  -webkit-flex-basis: 28.340080972%;
+      -ms-flex-preferred-size: 28.340080972%;
+          flex-basis: 28.340080972%; }
+
+.l-cart {
+  -webkit-flex-basis: 27.530364372%;
+      -ms-flex-preferred-size: 27.530364372%;
+          flex-basis: 27.530364372%; }
+
+.l-search {
+  -webkit-flex-basis: 44.129554656%;
+      -ms-flex-preferred-size: 44.129554656%;
+          flex-basis: 44.129554656%; }
 
 .l-cart {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
-
-.l-search {
-  -webkit-flex-basis: 60%;
-      -ms-flex-preferred-size: 60%;
-          flex-basis: 60%;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
 
 .l-logo, .l-search, .l-cart {
   display: -webkit-flex;
@@ -573,10 +568,9 @@ nav {
           align-items: center; }
 
 .l-menu {
-  box-sizing: border-box;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .l-left {
   margin-right: 5.9375em;
@@ -584,7 +578,7 @@ nav {
   padding-top: 1em; }
 
 .l-right {
-  width: 26.25em;
+  width: 42.5%;
   padding-top: 4.375em;
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
@@ -605,11 +599,9 @@ nav {
   font-family: Lobster, cursive;
   font-size: 3.0625em; }
 
-ul.menu {
+.menu {
   box-sizing: border-box;
   height: 2.25em;
-  margin: 0;
-  padding: 0;
   list-style: none; }
 
 .menu li {
@@ -627,34 +619,38 @@ ul.menu {
 .menu li a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.3125em; }
+  font-family: Bebas Neue Bold, sans-serif;
+  font-size: 1.1em; }
 
 .menu li:not(:last-child)::after {
-  height: 1.3125em;
-  margin-right: 1.3125em;
-  margin-left: 1.3125em;
+  display: block;
+  box-sizing: border-box;
+  width: 2px;
+  height: 1.065em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
   content: '';
-  border-left: 2px solid #fff; }
+  background-color: #fff; }
 
 .hdr-top {
   height: 5.25em; }
 
 .icon-cart {
-  width: 2.5625em;
+  width: 20%;
   height: 2.25em;
-  padding: 0.3125em;
+  padding: .3125em;
   fill: #3cc3b5; }
 
 .price {
   box-sizing: border-box;
-  padding-top: 0.25em;
+  padding-top: .25em;
   color: #a1a1a1;
   font-family: 'Bebas Neue Bold';
-  font-size: 2.125em; }
+  font-size: 1.838em; }
 
 input.search-input {
   box-sizing: border-box;
-  width: 27.125em;
+  width: 100%;
   height: 1.9375em;
   padding-right: 2em;
   padding-left: .5em;
@@ -677,18 +673,15 @@ input.search-input {
   background-size: .2em .2em;
   box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.3); }
 
-/* position dots in gallery */
 .gallery .flickity-page-dots {
   bottom: 2.125em; }
 
-/* white circles */
 .gallery .flickity-page-dots .dot {
-  width: 0.5625em;
-  height: 0.5625em;
+  width: .5625em;
+  height: .5625em;
   opacity: 1;
   background: #fff; }
 
-/* fill-in selected dot */
 .gallery .flickity-page-dots .dot.is-selected {
   background: rgba(255, 255, 255, 0.5); }
 
@@ -707,28 +700,28 @@ input.search-input {
 
 .bnr-title {
   margin: 0;
-  font-size: 3.5em;
-  font-family: Bebas Neue Bold, sans-serif; }
+  font-family: Bebas Neue Bold, sans-serif;
+  font-size: 3.5em; }
 
 .bnr-title:nth-of-type(2) {
-  margin-top: -0.179em; }
+  margin-top: -.179em; }
 
 .bnr-desc {
   width: 90%;
-  margin-top: 0.5em;
+  margin-top: .5em;
   margin-bottom: 1.8em;
   font-family: Open Sans, sans-serif;
   font-size: 1em; }
 
 .bnr-btn {
-  padding-top: 0.4em;
+  padding-top: .4em;
   padding-right: 1.087em;
-  padding-bottom: 0.4em;
+  padding-bottom: .4em;
   padding-left: 1.087em;
-  border: 0.144em solid #fff;
-  border-radius: 0.304em;
-  font-size: 1.438em;
-  background-color: transparent; }
+  border: .144em solid #fff;
+  border-radius: .304em;
+  background-color: transparent;
+  font-size: 1.438em; }
 
 .sldr-list-item {
   box-sizing: border-box;
@@ -742,8 +735,8 @@ input.search-input {
     margin-top: -.2em;
     padding: 0;
     color: #afafaf;
-    font-size: 1.438em;
-    font-family: Bebas Neue Bold, sans-serif; }
+    font-family: Bebas Neue Bold, sans-serif;
+    font-size: 1.438em; }
   .sldr-list-item img {
     max-width: 100%;
     -webkit-align-self: center;
@@ -761,7 +754,7 @@ input.search-input {
 
 .sldr-btn {
   margin-top: .85em;
-  padding: 0.5em 0.938em; }
+  padding: .5em .938em; }
 
 .sldr-list .flickity-prev-next-button {
   width: 5.5em;
@@ -799,10 +792,11 @@ input.search-input {
   box-sizing: border-box;
   margin: 0;
   margin-left: 1.438em;
-  font-size: 1.563em;
   padding: 0;
-  line-height: 2.8em;
-  letter-spacing: .04em; }
+  letter-spacing: .04em;
+  font-family: Bebas Neue Bold, sans-serif;
+  font-size: 1.563em;
+  line-height: 2.8em; }
 
 .main-gallery {
   margin-top: 2.9375em;
@@ -826,6 +820,7 @@ input.search-input {
   color: #afafaf;
   border-bottom: .313em solid #3cc395;
   box-shadow: 0 0 .188em #afafaf;
+  font-family: Bebas Neue Bold, sans-serif;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -870,7 +865,7 @@ input.search-input {
   line-height: 100%; }
 
 .item-btn {
-  padding: 0.563em .7143em; }
+  padding: .563em .7143em; }
 
 footer {
   background-color: #3cc3b5; }
@@ -888,6 +883,7 @@ footer {
 .footer-col-title {
   margin: 0;
   margin-bottom: .68em;
+  font-family: Bebas Neue Bold, sans-serif;
   font-size: 1.563em;
   line-height: 100%; }
 

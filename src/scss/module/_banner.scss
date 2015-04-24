@@ -7,19 +7,18 @@
   box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, .3);
 }
 
-/* position dots in gallery */
 .gallery .flickity-page-dots {
   bottom: 2.125em;
 }
-/* white circles */
+
 .gallery .flickity-page-dots .dot {
-  width: 0.5625em;
-  height: 0.5625em;
+  width: .5625em;
+  height: .5625em;
 
   opacity: 1;
   background: #fff;
 }
-/* fill-in selected dot */
+
 .gallery .flickity-page-dots .dot.is-selected {
   background: rgba(255,255,255,.5);
 }
@@ -39,36 +38,35 @@
   }
 }
 
-//height: 446px;
-
 .bnr-title {
   margin: 0;
 
+  font-family: $font-main;
   font-size: 3.5em;
-  font-family: $font-bold;
 }
 
-.bnr-title:nth-of-type(2){
-  margin-top: -0.179em;
+.bnr-title:nth-of-type(2) {
+  margin-top: -.179em;
 }
 
 .bnr-desc {
   width: 90%;
-  margin-top: 0.5em;
+  margin-top: .5em;
   margin-bottom: 1.8em;
+
   font-family: $font-desc;
   font-size: 1em;
 }
 
 .bnr-btn {
-  padding-top: 0.4em;
+  padding-top: .4em;
   padding-right: 1.087em;
-  padding-bottom: 0.4em;
+  padding-bottom: .4em;
   padding-left: 1.087em;
 
-  border: 0.144em solid #fff;
-  border-radius: 0.304em;
+  border: .144em solid #fff;
+  border-radius: .304em;
+  background-color: transparent;
 
   font-size: $font-27;
-  background-color: transparent;
 }

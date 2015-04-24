@@ -12,7 +12,6 @@
   max-width: 255px;
   max-height: 260px;
   margin-right: 6.484641638%;
-//  margin-bottom: 5.348%;
   margin-bottom: 2.938em;
   padding-top: 2.000em;
   padding-bottom: 1.875em;
@@ -20,6 +19,8 @@
   color: $brand-title-color;
   border-bottom: .313em solid $btn-bg;
   box-shadow: 0 0 .188em $brand-title-color;
+
+  font-family: $font-main;
 
   align-items: center;
   justify-content: flex-end;
@@ -55,11 +56,11 @@
 
   margin-right: .65em;
 
-  font-family: $font-bold;
+  font-family: $font-main;
   font-size: $font-27;
   line-height: 100%;
 }
 
 .item-btn {
-  padding: 0.563em .7143em;
+  padding: .563em .7143em;
 }

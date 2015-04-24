@@ -1,8 +1,6 @@
-ul.menu {
+.menu {
   box-sizing: border-box;
-  height: em(36);
-  margin: 0;
-  padding: 0;
+  height: 2.25em;
 
   list-style: none;
 }
@@ -16,15 +14,20 @@ ul.menu {
 
   color: #fff;
 
-  font-size: em(21);
+  font-family: $font-main;
+  font-size: 1.1em;
 }
 
 .menu li:not(:last-child)::after {
-  height: em(21);
-  margin-right: em(21);
-  margin-left: em(21);
+  display: block;
+
+  box-sizing: border-box;
+  width: 2px;
+  height: 1.065em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
 
   content: '';
 
-  border-left: 2px solid #fff;
+  background-color: #fff;
 }

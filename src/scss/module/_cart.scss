@@ -1,18 +1,20 @@
 .icon-cart {
-  width: em(41);
-  height: em(36);
-  padding: em(5);
+  width: 20%;
+  height: 2.25em;
+  padding: .3125em;
 
   fill: $main-color;
 }
 
 .price {
   box-sizing: border-box;
-  padding-top: em(4);
+  padding-top: .25em;
 
   color: $font-price-color;
-  //  font-weight: 900;
 
   font-family: 'Bebas Neue Bold';
-  font-size: em(34);
+  font-size: 1.838em;
 }
+
+//width: 41px;
+//height: 37px;

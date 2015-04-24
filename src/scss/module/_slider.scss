@@ -11,11 +11,12 @@
 
     color: $brand-title-color;
 
+    font-family: $font-main;
     font-size: $font-27;
-    font-family: $font-bold;
   }
   img {
     max-width: 100%;
+
     align-self: center;
   }
 }
@@ -33,7 +34,7 @@
 
 .sldr-btn {
   margin-top: .85em;
-  padding: 0.5em 0.938em;
+  padding: .5em .938em;
 }
 
 

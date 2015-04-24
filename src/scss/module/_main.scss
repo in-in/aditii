@@ -9,9 +9,11 @@
   box-sizing: border-box;
   margin: 0;
   margin-left: 1.438em;
-  font-size: 1.563em;
   padding: 0;
 
+  letter-spacing: .04em;
+
+  font-family: $font-main;
+  font-size: 1.563em;
   line-height: 2.8em;
-  letter-spacing: .04em
 }
