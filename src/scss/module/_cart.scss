@@ -18,3 +18,13 @@
 
 //width: 41px;
 //height: 37px;
+
+@media screen and (max-width:768px) {
+  .cart {
+    width: 45%;
+
+    transition: all .4s ease;
+
+    font-size: 1.1em;
+  }
+}

@@ -23,15 +23,25 @@
   flex-wrap: wrap;
 }
 
+@media screen and (max-width:768px) {
+  .hdr-top .row {
+    display: block;
+  }
+}
+
+
 .l-logo {
   flex-basis: 28.340080972%;
+  order: 1;
 }
 .l-cart {
   flex-basis: 27.530364372%;
+  order: 3;
 }
 
 .l-search {
   flex-basis: 44.129554656%;
+  order: 2;
 }
 
 .l-cart {

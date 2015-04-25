@@ -535,20 +535,33 @@ nav {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
 
+@media screen and (max-width: 768px) {
+  .hdr-top .row {
+    display: block; } }
+
 .l-logo {
   -webkit-flex-basis: 28.340080972%;
       -ms-flex-preferred-size: 28.340080972%;
-          flex-basis: 28.340080972%; }
+          flex-basis: 28.340080972%;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
 
 .l-cart {
   -webkit-flex-basis: 27.530364372%;
       -ms-flex-preferred-size: 27.530364372%;
-          flex-basis: 27.530364372%; }
+          flex-basis: 27.530364372%;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3; }
 
 .l-search {
   -webkit-flex-basis: 44.129554656%;
       -ms-flex-preferred-size: 44.129554656%;
-          flex-basis: 44.129554656%; }
+          flex-basis: 44.129554656%;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
 
 .l-cart {
   -webkit-justify-content: flex-end;
@@ -599,6 +612,14 @@ nav {
   font-family: Lobster, cursive;
   font-size: 3.0625em; }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 45%;
+    margin-left: 5%;
+    font-size: 2.5em;
+    transition: all .4s ease;
+    float: left; } }
+
 .menu {
   box-sizing: border-box;
   height: 2.25em;
@@ -635,6 +656,10 @@ nav {
 .hdr-top {
   height: 5.25em; }
 
+@media screen and (max-width: 768px) {
+  .hdr-top {
+    height: auto; } }
+
 .icon-cart {
   width: 20%;
   height: 2.25em;
@@ -647,6 +672,12 @@ nav {
   color: #a1a1a1;
   font-family: 'Bebas Neue Bold';
   font-size: 1.838em; }
+
+@media screen and (max-width: 768px) {
+  .cart {
+    width: 45%;
+    font-size: 1.1em;
+    transition: all .4s ease; } }
 
 input.search-input {
   box-sizing: border-box;
@@ -665,6 +696,12 @@ input.search-input {
   input.search-input:focus {
     border: 1px solid #3cc3b5;
     background-image: none; }
+
+@media screen and (max-width: 768px) {
+  .search {
+    clear: both;
+    width: 90%;
+    margin: 1em auto; } }
 
 .hdr-banner {
   height: 27.875em;

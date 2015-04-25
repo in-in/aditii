@@ -1,3 +1,9 @@
 .hdr-top {
-  height: em(84);
+  height: 5.25em;
+}
+
+@media screen and (max-width:768px) {
+  .hdr-top {
+    height: auto;
+  }
 }
