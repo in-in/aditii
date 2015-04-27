@@ -614,11 +614,11 @@ nav {
 
 @media screen and (max-width: 768px) {
   .logo {
+    float: left;
     width: 45%;
     margin-left: 5%;
-    font-size: 2.5em;
     transition: all .4s ease;
-    float: left; } }
+    font-size: 2.5em; } }
 
 .menu {
   box-sizing: border-box;
@@ -635,23 +635,68 @@ nav {
           align-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0;
+  padding: 0; }
 
 .menu li a {
+  display: block;
   text-decoration: none;
   color: #fff;
   font-family: Bebas Neue Bold, sans-serif;
   font-size: 1.1em; }
 
 .menu li:not(:last-child)::after {
-  display: block;
   box-sizing: border-box;
   width: 2px;
   height: 1.065em;
   margin-right: 1.5em;
   margin-left: 1.5em;
-  content: '';
-  background-color: #fff; }
+  background-color: #fff;
+  content: ''; }
+
+@media screen and (max-width: 980px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.4em;
+    margin-left: 1.4em; } }
+
+@media screen and (max-width: 980px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.3em;
+    margin-left: 1.3em; } }
+
+@media screen and (max-width: 921px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.2em;
+    margin-left: 1.2em; } }
+
+@media screen and (max-width: 892px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.1em;
+    margin-left: 1.1em; } }
+
+@media screen and (max-width: 863px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1em;
+    margin-left: 1em; } }
+
+@media screen and (max-width: 835px) {
+  .menu li:not(:last-child)::after {
+    margin-right: .9em;
+    margin-left: .9em; } }
+
+@media screen and (max-width: 806px) {
+  .menu li a {
+    font-size: 1.05em; } }
+
+@media screen and (max-width: 783px) {
+  .menu li:not(:last-child)::after {
+    margin-right: .8em;
+    margin-left: .8em; } }
+
+@media screen and (max-width: 755px) {
+  nav {
+    display: none; } }
 
 .hdr-top {
   height: 5.25em; }
@@ -676,8 +721,9 @@ nav {
 @media screen and (max-width: 768px) {
   .cart {
     width: 45%;
+    transition: all .4s ease;
     font-size: 1.1em;
-    transition: all .4s ease; } }
+    margin-top: .7em; } }
 
 input.search-input {
   box-sizing: border-box;
@@ -700,8 +746,8 @@ input.search-input {
 @media screen and (max-width: 768px) {
   .search {
     clear: both;
-    width: 90%;
-    margin: 1em auto; } }
+    width: 100%;
+    margin: .7em auto; } }
 
 .hdr-banner {
   height: 27.875em;

@@ -6,10 +6,15 @@
 }
 
 .menu li {
+  margin: 0;
+  padding: 0;
+
   @include f-center;
 }
 
 .menu li a {
+  display: block;
+
   text-decoration: none;
 
   color: #fff;
@@ -19,8 +24,6 @@
 }
 
 .menu li:not(:last-child)::after {
-  display: block;
-
   box-sizing: border-box;
   width: 2px;
   height: 1.065em;
@@ -30,4 +33,74 @@
   content: '';
 
   background-color: #fff;
+}
+
+
+@media screen and (max-width:980px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.4em;
+    margin-left: 1.4em;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.3em;
+    margin-left: 1.3em;
+  }
+}
+
+@media screen and (max-width:921px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+  }
+}
+
+@media screen and (max-width:892px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1.1em;
+    margin-left: 1.1em;
+  }
+}
+
+@media screen and (max-width:863px) {
+  .menu li:not(:last-child)::after {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width:835px) {
+  .menu li:not(:last-child)::after {
+    margin-right: .9em;
+    margin-left: .9em;
+  }
+}
+
+@media screen and (max-width:806px) {
+  .menu li a {
+    font-size: 1.05em;
+  }
+}
+
+@media screen and (max-width:783px) {
+  .menu li:not(:last-child)::after {
+    margin-right: .8em;
+    margin-left: .8em;
+  }
+}
+
+@media screen and (max-width:755px) {
+  nav {
+    display: none;
+  }
+
+  //  .test {
+  //    display: block;
+  //    width: 200px;
+  //    outline: 1px dashed black;
+  //    color: black;
+  //    
+  //  }
 }
