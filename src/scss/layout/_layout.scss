@@ -23,7 +23,7 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:790px) {
   .hdr-top .row {
     display: block;
   }
@@ -52,10 +52,6 @@
 .l-search,
 .l-cart {
   @include f-center;
-}
-
-.l-menu {
-  justify-content: space-between;
 }
 
 .l-left {

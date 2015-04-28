@@ -1,8 +1,6 @@
 @mixin f-center {
   display: flex;
 
-  box-sizing: border-box;
-
   align-content: center;
   align-items: center;
 }

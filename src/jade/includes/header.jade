@@ -8,14 +8,14 @@ header
                         use(xlink:href="#icon-cart")
                     .price $300
                 .l-search.search
-                    ul.test
-                        li foo
-                        li boo
-                        li moo
+                    .dropdown
+                        .dropdown-title Menu
+                            .caret
+                        +list(menuItem)(role="dropdown").menu
                     input(type="text", name="search").search-input
     nav
         .container
-            +list(menuItem).row.l-menu.menu
+            +list(menuItem)(role="horizontal").row.menu
     // BANNER
     include banner
     // BANNER ends
