@@ -754,38 +754,39 @@ nav {
 
 @media screen and (max-width: 1016px) {
   .menu[role='horizontal'] li a {
-    padding-right: 1.3em;
-    padding-left: 1.3em; } }
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    color: red; } }
 
 @media screen and (max-width: 957px) {
   .menu[role='horizontal'] li a {
-    padding-right: 1.2em;
-    padding-left: 1.2em; } }
+    padding-right: 1.1em;
+    padding-left: 1.1em;
+    color: blue; } }
 
 @media screen and (max-width: 926px) {
   .menu[role='horizontal'] li a {
-    padding-right: 1.1em;
-    padding-left: 1.1em; } }
+    padding-right: 1em;
+    padding-left: 1em;
+    color: orange; } }
 
 @media screen and (max-width: 895px) {
   .menu[role='horizontal'] li a {
-    padding-right: 1em;
-    padding-left: 1em; } }
+    padding-right: .9em;
+    padding-left: .9em;
+    color: purple; } }
 
 @media screen and (max-width: 863px) {
   .menu[role='horizontal'] li a {
-    padding-right: .9em;
-    padding-left: .9em; } }
+    padding-right: .8em;
+    padding-left: .8em;
+    color: black; } }
 
 @media screen and (max-width: 831px) {
   .menu[role='horizontal'] li a {
-    padding-right: .8em;
-    padding-left: .8em; } }
-
-@media screen and (max-width: 800px) {
-  .menu[role='horizontal'] li a {
-    padding-right: .75em;
-    padding-left: .75em; } }
+    padding-right: .7em;
+    padding-left: .7em;
+    color: green; } }
 
 @media screen and (max-width: 790px) {
   nav {
