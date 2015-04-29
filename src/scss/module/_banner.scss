@@ -1,6 +1,4 @@
 .hdr-banner {
-  height: em(446);
-
   background-color: $main-color;
   background-image: radial-gradient(circle, $main-color, darken($main-color, 2%), darken($main-color, 4%));
   background-size: .2em .2em;
@@ -25,16 +23,20 @@
 
 .gallery {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 27.875em;
 }
 
 .gallery-cell {
   width: 100%;
-  min-height: 27.5em;
+  min-height: 27.875em;
 
   align-items: center;
   img {
+    display: block;
+
     max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -69,4 +71,58 @@
   background-color: transparent;
 
   font-size: $font-27;
+}
+
+
+@media screen and (max-width:660px) {
+  .bnr-title {
+    font-size: 3em;
+  }
+
+  .gallery .flickity-page-dots {
+    bottom: 1em;
+  }
+}
+
+@media screen and (max-width:590px) {
+  .bnr-title {
+    font-size: 2.5em;
+  }
+
+  .bnr-desc {
+    margin-bottom: 1em;
+
+    font-size: .9em;
+  }
+
+  .gallery-cell {
+    min-height: 24em;
+  }
+
+  .bnr-btn {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .bnr-desc {
+    display: none;
+  }
+
+  .bnr-title {
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+  }
+
+  .bnr-btn {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+
+    box-shadow: 0 0 1px 0 rgba(0,0,0,.5);
+  }
+
+  .gallery .flickity-page-dots {
+    display: none;
+  }
 }
