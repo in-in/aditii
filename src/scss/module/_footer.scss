@@ -2,12 +2,17 @@ footer {
   background-color: $main-color;
 }
 
+footer .row {
+  justify-content: center;
+}
+
 .footer-top {
   padding-top: 2.938em;
   padding-bottom: 2.500em;
 }
 
 .footer-top-col {
+  box-sizing: border-box;
   margin-right: 11.945392491%;
 }
 
@@ -53,4 +58,50 @@ footer {
   font-family: $font-desc;
   font-size: .938em;
   line-height: 2.875em;
+}
+
+@media screen and (max-width: 950px) {
+  .footer-top-col {
+    margin-right: 9%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .footer-top-col {
+    margin-right: 7%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  footer .l-centered {
+    width: 100%;
+  }
+
+  .footer-top-col {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-top-col {
+    margin-right: 3%;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  footer .row {
+    justify-content: space-around;
+  }
+
+  .footer-top-col {
+    width: 35%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-top-col {
+    width: 40%;
+  }
 }
