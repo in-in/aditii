@@ -21,7 +21,6 @@ module.exports = function (grunt) {
         options: {
           includePaths: [
             'node_modules/normalize-libsass/',
-            'node_modules/bourbon/app/assets/stylesheets',
             'src/scss/',
             'src/scss/base/',
             'src/scss/layout/',
@@ -47,11 +46,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
-    
-    // Build tasks
-    
-    
     svgstore: {
       options: {
         cleanup: true,
@@ -107,10 +101,11 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
-          port: 3003,
+          port: 3008,
           notify: false,
-          injectChanges: true,
+          injectChanges: false, // test
           open: true,
+          ui: false,
           browser: "chromium-browser",
           server: {
             baseDir: "src"
@@ -119,7 +114,7 @@ module.exports = function (grunt) {
       }
     },
 
-    //    CssComb
+    //    CSSCOMB
 
     csscomb: {
       dev: {
@@ -139,9 +134,21 @@ module.exports = function (grunt) {
         }]
       }
     },
+    
+    // UNCSS
+    
+    uncss: {
+      dist: {
+        options: {
+          ignore: ['#added_at_runtime', '.created_by_jQuery']
+        },
+        files: {
+          'src/css/style.css': ['src/index.html']
+        }
+      }
+    },
 
-
-    // Build tasks
+    // BUILD TASKS
 
 
     clean: {
@@ -222,6 +229,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-uncss');
 
   grunt.registerTask('comb', ['newer:csscomb']);
   grunt.registerTask('svg', ['newer:svgmin:dev', 'svgstore']);

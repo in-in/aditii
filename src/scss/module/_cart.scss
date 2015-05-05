@@ -1,13 +1,18 @@
-.icon-cart {
-  width: 20%;
-  height: 2.25em;
-  padding: .3125em;
+.cart {
+  padding-top: .35em;
+  padding-bottom: .35em;
+}
 
-  fill: $main-color;
+.icon-cart {
+  display: inline-block;
+
+  width: 2.563em;
+  height: 2.313em;
 }
 
 .price {
   box-sizing: border-box;
+  margin-left: .4081em;
   padding-top: .25em;
 
   color: $font-price-color;
@@ -16,16 +21,16 @@
   font-size: 1.838em;
 }
 
-//width: 41px;
-//height: 37px;
+#icon-cart {
+  font-size: 1.838em;
 
-@media screen and (max-width:790px) {
+  fill: $main-color;
+}
+
+@media screen and (max-width:90px) {
   .cart {
     width: 50%;
-    margin-top: .7em;
 
     transition: all .4s ease;
-
-    font-size: 1.1em;
   }
 }

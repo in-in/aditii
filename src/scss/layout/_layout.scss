@@ -8,6 +8,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 1024px;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.125em;
@@ -19,6 +20,7 @@
   flex-direction: row;
 
   box-sizing: border-box;
+  height: 100%;
 
   flex-wrap: wrap;
 }
@@ -29,23 +31,19 @@
   }
 }
 
-
 .l-logo {
   flex-basis: 28.340080972%;
   order: 1;
 }
 .l-cart {
   flex-basis: 27.530364372%;
+  justify-content: flex-end;
   order: 3;
 }
 
 .l-search {
   flex-basis: 44.129554656%;
   order: 2;
-}
-
-.l-cart {
-  justify-content: flex-end;
 }
 
 .l-logo,

@@ -518,6 +518,7 @@ nav {
   box-sizing: border-box;
   width: 100%;
   max-width: 1024px;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.125em;
@@ -531,6 +532,7 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   box-sizing: border-box;
+  height: 100%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -551,6 +553,9 @@ nav {
   -webkit-flex-basis: 27.530364372%;
       -ms-flex-preferred-size: 27.530364372%;
           flex-basis: 27.530364372%;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-order: 3;
       -ms-flex-order: 3;
           order: 3; }
@@ -562,11 +567,6 @@ nav {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2; }
-
-.l-cart {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
 
 .l-logo, .l-search, .l-cart {
   display: -webkit-flex;
@@ -789,31 +789,37 @@ nav {
     display: block; } }
 
 .hdr-top {
-  height: 5.25em; }
+  height: 5.125em; }
 
 @media screen and (max-width: 790px) {
   .hdr-top {
     height: auto; } }
 
+.cart {
+  padding-top: .35em;
+  padding-bottom: .35em; }
+
 .icon-cart {
-  width: 20%;
-  height: 2.25em;
-  padding: .3125em;
-  fill: #3cc3b5; }
+  display: inline-block;
+  width: 2.563em;
+  height: 2.313em; }
 
 .price {
   box-sizing: border-box;
+  margin-left: .4081em;
   padding-top: .25em;
   color: #a1a1a1;
   font-family: 'Bebas Neue Bold';
   font-size: 1.838em; }
 
-@media screen and (max-width: 790px) {
+#icon-cart {
+  font-size: 1.838em;
+  fill: #3cc3b5; }
+
+@media screen and (max-width: 90px) {
   .cart {
     width: 50%;
-    margin-top: .7em;
-    transition: all .4s ease;
-    font-size: 1.1em; } }
+    transition: all .4s ease; } }
 
 input.search-input {
   box-sizing: border-box;
