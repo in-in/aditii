@@ -736,7 +736,8 @@ nav {
   position: relative;
   top: -1.125em;
   left: 1.5625em;
-  margin-left: .4em; }
+  margin-left: .4em;
+  -moz-transform: scale(.9999); }
 
 .caret:before {
   position: absolute;
@@ -1186,14 +1187,13 @@ input.search-input {
     margin-right: 0; }
   .main-gallery-item {
     width: 45%;
-    margin-bottom: 6%; } }
+    margin-bottom: 2.625em; } }
 
 @media screen and (max-width: 480px) {
   .main-gallery-item {
     box-sizing: border-box;
-    width: 255px;
-    margin-right: 0;
-    margin-bottom: 6%; }
+    width: 15.938em;
+    margin-right: 0; }
   .main-gallery-item:nth-child(3n) {
     margin-right: 0; } }
 
