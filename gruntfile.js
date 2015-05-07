@@ -103,7 +103,7 @@ module.exports = function (grunt) {
           watchTask: true,
           port: 3008,
           notify: false,
-          injectChanges: false, // test
+          injectChanges: true,
           open: true,
           ui: false,
           browser: "chromium-browser",

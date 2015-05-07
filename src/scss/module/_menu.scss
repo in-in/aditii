@@ -58,10 +58,11 @@
   display: none;
 
   box-sizing: border-box;
-  height: $dropdown-height;
-  margin-right: .8em;
-  padding-right: 1.5em;
-  padding-left: .8em;
+  width: 7%;
+  min-width: 3.4em;
+  height: 1.9375em;
+  margin-right: 1%;
+  padding-left: .5em;
 
   background-color: $main-color;
   &:hover > ul {
@@ -76,7 +77,7 @@
 .dropdown-title {
   font-family: $font-main;
   font-size: 1em;
-  line-height: $dropdown-height;
+  line-height: 1.9375em;
 }
 
 .menu[role='dropdown'] {
@@ -115,8 +116,8 @@
 
 .caret {
   position: relative;
-  top: -$caret-pos;
-  right: -100%;
+  top: -1.125em;
+  left: 1.5625em;
 
   margin-left: .4em;
 }
@@ -128,21 +129,21 @@
 
   content: '';
 
-  border-top: .353em solid #fff;
-  border-right: .353em solid transparent;
-  border-left: .353em solid transparent;
+  border-top: .313em solid #fff;
+  border-right: .313em solid transparent;
+  border-left: .313em solid transparent;
 }
 
 .caret:after {
   position: absolute;
   top: 0;
-  left: 2px;
+  left: 1px;
 
   content: '';
 
-  border-top: .235em solid $main-color;
-  border-right: .235em solid transparent;
-  border-left: .235em solid transparent;
+  border-top: .250em solid $main-color;
+  border-right: .250em solid transparent;
+  border-left: .250em solid transparent;
 }
 
 
